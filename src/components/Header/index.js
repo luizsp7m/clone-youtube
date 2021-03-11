@@ -9,12 +9,17 @@ import { FaMicrophone } from 'react-icons/fa';
 import { BsFillGrid3X3GapFill } from 'react-icons/bs';
 import { IoMdNotifications } from 'react-icons/io';
 
-function Header() {
+function Header(props) {
+
+  function menuToggle() {
+    props.setMenuToggle(!props.menuToggle);
+  }
+
   return (
     <Container>
       <Navbar>
         <Left>
-          <div className="menu-toggle">
+          <div className="menu-toggle" onClick={menuToggle}>
             <div></div>
             <div></div>
             <div></div>

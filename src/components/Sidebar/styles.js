@@ -2,9 +2,11 @@ import styled from 'styled-components';
 
 export const Container = styled.div`
   width: 23.5rem;
-  height: calc(100vh - 4.8rem);
   background: var(--white);
   overflow: hidden;
+  position: fixed;
+  left: 0;
+  height: 100%;
 
   &:hover {
     overflow-y: scroll;
@@ -52,3 +54,36 @@ export const Container = styled.div`
     }
   }
 `;
+
+export const ContainerReduced = styled.div`
+  width: 6.2rem;
+  background: var(--white);
+  position: fixed;
+  left: 0;
+  height: 100%;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  padding: 1rem 0;
+
+  > div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1.05rem 0;
+    width: 100%;
+
+    &:hover {
+      background: #f0f0f5;
+      cursor: pointer;
+    }
+
+    > p {
+      margin-top: .75rem;
+      font-size: 1rem;
+      color: #333;
+    }
+  }
+` 
